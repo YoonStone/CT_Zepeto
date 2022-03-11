@@ -1,10 +1,7 @@
 import { AnimationClip, Canvas, CharacterController, Collider, Debug, GameObject, Transform, WaitForSeconds } from 'UnityEngine'
-import { EventSystem } from 'UnityEngine.EventSystems';
 import { Button } from 'UnityEngine.UI';
-import { CharacterState, ZepetoCamera, ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller';
-import { Room, RoomData } from 'ZEPETO.Multiplay';
+import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import { ZepetoWorldMultiplay } from 'ZEPETO.World';
 import ClientStarter from '../ClientStarter';
 
 export default class Interaction_Sit extends ZepetoScriptBehaviour {
@@ -25,83 +22,83 @@ export default class Interaction_Sit extends ZepetoScriptBehaviour {
 
         this.clientStater = GameObject.Find("ClientStarter").GetComponent<ClientStarter>();
 
-        // º¯¼ö ÇÒ´ç
+        // ë³€ìˆ˜ í• ë‹¹
         this.openUI = this.transform.GetChild(0).gameObject;
         this.sittingPos = this.transform.GetChild(1);
         this.button = this.openUI.GetComponentInChildren<Button>();
         this.canvas = this.openUI.GetComponent<Canvas>();
 
 
-        // ÀÇÀÚ ÀÎµ¦½º ºÎ¿©
+        // ì˜ì ì¸ë±ìŠ¤ ë¶€ì—¬
         this.number = parseInt(this.gameObject.name.split('_')[1]);
 
-        // ¾É±â ¹öÆ° ´©¸£¸é ¾É±â
+        // ì•‰ê¸° ë²„íŠ¼ ëˆ„ë¥´ë©´ ì•‰ê¸°
         this.button.onClick.AddListener(() => {
 
-            // ¾ÉÀº ÀÇÀÚ·Î »óÅÂ º¯°æ
+            // ì•‰ì€ ì˜ìë¡œ ìƒíƒœ ë³€ê²½
             this.isSit = true;
 
-            // ¹öÆ° ¾È º¸ÀÌ°Ô
+            // ë²„íŠ¼ ì•ˆ ë³´ì´ê²Œ
             this.openUI.SetActive(false);
 
-            // ³» Ä³¸¯ÅÍ
+            // ë‚´ ìºë¦­í„°
             const character = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
 
-            // [ÀÇÀÚ µ¿±âÈ­] ¾ÉÀº ÀÇÀÚ ¹øÈ£ °»½Å
+            // [ì˜ì ë™ê¸°í™”] ì•‰ì€ ì˜ì ë²ˆí˜¸ ê°±ì‹ 
             this.clientStater.SendSitting(this.number);
 
-            // Ä³¸¯ÅÍ ÄÁÆ®·Ñ·¯ ²ô±â
+            // ìºë¦­í„° ì»¨íŠ¸ë¡¤ëŸ¬ ë„ê¸°
             character.GetComponent<CharacterController>().enabled = false;
 
-            // ¾ÉÀ» À§Ä¡·Î ÅÚ·¹Æ÷Æ®
+            // ì•‰ì„ ìœ„ì¹˜ë¡œ í…”ë ˆí¬íŠ¸
             character.transform.position = this.sittingPos.position;
             character.transform.rotation = this.sittingPos.rotation;
 
-            // ¾É´Â Á¦½ºÃ³
+            // ì•‰ëŠ” ì œìŠ¤ì²˜
             character.SetGesture(this.animationClip);
         });
     }
 
-    // ´êÀ¸¸é ¹öÆ° º¸ÀÌ°Ô
+    // ë‹¿ìœ¼ë©´ ë²„íŠ¼ ë³´ì´ê²Œ
     OnTriggerEnter(collier: Collider) {
 
-        // ºó ÀÇÀÚ + ´êÀº Ä³¸¯ÅÍ°¡ ³» Ä³¸¯ÅÍÀÏ ¶§¸¸
+        // ë¹ˆ ì˜ì + ë‹¿ì€ ìºë¦­í„°ê°€ ë‚´ ìºë¦­í„°ì¼ ë•Œë§Œ
         if (!this.isSit && collier.gameObject
             == ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject)
         {
-            // ¸ğµç ÀÇÀÚ Ã£±â
+            // ëª¨ë“  ì˜ì ì°¾ê¸°
             const chairs = GameObject.FindGameObjectsWithTag("CanSit");
 
-            // ¸ğµç ¹öÆ°À» ¹İº¹ÇØ¼­ ²ô±â
+            // ëª¨ë“  ë²„íŠ¼ì„ ë°˜ë³µí•´ì„œ ë„ê¸°
             for (var i = 0; i < chairs.Length; i++) {
                 chairs[i].transform.GetChild(0).gameObject.SetActive(false);
             }
 
-            // ¹æ±İ ´êÀº ÀÌ ¹öÆ°¸¸ º¸ÀÌ°Ô
+            // ë°©ê¸ˆ ë‹¿ì€ ì´ ë²„íŠ¼ë§Œ ë³´ì´ê²Œ
             this.openUI.SetActive(true);
         }
     }
 
-    // ¶³¾îÁö¸é ¹öÆ° ¾È º¸ÀÌ°Ô
+    // ë–¨ì–´ì§€ë©´ ë²„íŠ¼ ì•ˆ ë³´ì´ê²Œ
     OnTriggerExit(collier) {
         this.openUI.SetActive(false);
     }
 
     Update()
     {
-        // ¾É¾ÆÀÖ´Â »óÅÂ¿¡¼­ ¿òÁ÷ÀÌ¸é
+        // ì•‰ì•„ìˆëŠ” ìƒíƒœì—ì„œ ì›€ì§ì´ë©´
         if (this.isSit && ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.tryMove)
         {
-            // ³» Ä³¸¯ÅÍ
+            // ë‚´ ìºë¦­í„°
             const character = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
 
-            // Á¦½ºÃ³ Áß´Ü
+            // ì œìŠ¤ì²˜ ì¤‘ë‹¨
             character.CancelGesture();
 
-            // Ä³¸¯ÅÍ ÄÁÆ®·Ñ·¯ ÄÑ±â
+            // ìºë¦­í„° ì»¨íŠ¸ë¡¤ëŸ¬ ì¼œê¸°
             character.GetComponent<CharacterController>().enabled = true;
 
-            // ºó ÀÇÀÚ·Î »óÅÂ º¯°æ
+            // ë¹ˆ ì˜ìë¡œ ìƒíƒœ ë³€ê²½
             this.isSit = false;
         }
     }

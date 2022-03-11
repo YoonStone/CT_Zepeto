@@ -1,5 +1,5 @@
 import { Canvas, Debug, GameObject } from 'UnityEngine'
-import { ZepetoCamera, ZepetoPlayers } from 'ZEPETO.Character.Controller';
+import { ZepetoCamera } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 
@@ -7,13 +7,13 @@ export default class Billboard extends ZepetoScriptBehaviour {
 
     Start()
     {
-        // ¿ùµå ½ºÆäÀÌ½º Äµ¹ö½º¿¡ Á¦ÆäÅä Ä«¸Ş¶ó µî·ÏÇÏ±â
+        // ì›”ë“œ ìŠ¤í˜ì´ìŠ¤ ìº”ë²„ìŠ¤ì— ì œí˜í†  ì¹´ë©”ë¼ ë“±ë¡í•˜ê¸°
         this.GetComponent<Canvas>().worldCamera = GameObject.FindObjectOfType<ZepetoCamera>().camera;
     }
 
     Update()
     {
-        // Ä«¸Ş¶óÀÇ °¢µµ µû¶ó°¡µµ·Ï
+        // ì¹´ë©”ë¼ì˜ ê°ë„ ë”°ë¼ê°€ë„ë¡
         this.transform.rotation = GameObject.FindObjectOfType<ZepetoCamera>().transform.GetChild(0).rotation;
     }
 }

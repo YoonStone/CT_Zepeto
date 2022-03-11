@@ -5,7 +5,6 @@ import {Player, State, Vector3} from 'ZEPETO.Multiplay.Schema'
 import {CharacterState, SpawnInfo, ZepetoPlayers, ZepetoPlayer, ZepetoCharacter} from 'ZEPETO.Character.Controller'
 import * as UnityEngine from "UnityEngine"; // Vector3 사용하기 위함
 import Interaction_Sit from './Interaction/Interaction_Sit'
-import CharacterManager from './CharacterManager'
 
 
 export default class ClientStarter extends ZepetoScriptBehaviour {
