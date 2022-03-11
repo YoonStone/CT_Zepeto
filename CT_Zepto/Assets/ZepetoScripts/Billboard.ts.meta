@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: b3cfe3ac06162dc438bb3b5f841f0482
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Billboard extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        // \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u033D\uFFFD \u0135\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD \u012B\uFFFD\u07B6\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD\u03F1\uFFFD\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = UnityEngine_1.GameObject.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoCamera)).camera;\\r\\n   
+    }\\r\\n    Update() {\\r\\n        // \u012B\uFFFD\u07B6\uFFFD\uFFFD\uFFFD \uFFFD\uFFFD\uFFFD\uFFFD
+    \uFFFD\uFFFD\uFFFD\U000F0875\uFFFD\uFFFD\uFFFD\\r\\n        this.transform.rotation
+    = UnityEngine_1.GameObject.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoCamera)).transform.GetChild(0).rotation;\\r\\n   
+    }\\r\\n}\\r\\nexports.default = Billboard;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmlsbGJvYXJkLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQmlsbGJvYXJkLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVEO0FBQ3ZELDZFQUEwRTtBQUMxRSxpREFBcUQ7QUFHckQsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUV4RCxLQUFLO1FBRUQsMENBQTBDO1FBQzFDLElBQUksQ0FBQyxZQUFZLFNBQUMsb0JBQU0sR0FBSSxXQUFXLEdBQUcsd0JBQVUsQ0FBQyxnQkFBZ0IsU0FBQywwQ0FBWSxHQUFJLE1BQU0sQ0FBQztJQUNqRyxDQUFDO0lBRUQsTUFBTTtRQUVGLHVCQUF1QjtRQUN2QixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLGdCQUFnQixTQUFDLDBDQUFZLEdBQUksU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUM7SUFDekcsQ0FBQztDQUNKO0FBYkQsNEJBYUMifQ==\",\"assetPath\":\"Assets/ZepetoScripts/Billboard.ts\",\"manifest\":{\"properties\":[],\"name\":\"Billboard\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 4766b4cb649929180b17fa460260eb5f
