@@ -1,4 +1,4 @@
-import { Canvas, GameObject, Screen, Rect, RectTransform, Resources, WaitForSeconds, YieldInstruction, Sprite } from 'UnityEngine';
+import { Canvas, GameObject, Screen, Rect, RectTransform, Resources, WaitForSeconds, YieldInstruction, Sprite, Vector2 } from 'UnityEngine';
 import { Button, Image, Text } from 'UnityEngine.UI'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import ScreenShotController from './ScreenShotController';
@@ -104,7 +104,12 @@ export default class UIController extends ZepetoScriptBehaviour {
         // SafeArea 설정
         let safeArea: Rect = Screen.safeArea;
         let newAnchorMin = safeArea.position;
-        let newAnchorMax = safeArea.position + safeArea.size;
+        
+        let newAnchorMax = safeArea.position;
+        
+        newAnchorMax.x = safeArea.position.x + safeArea.size.x;
+        newAnchorMax.y = safeArea.position.y + safeArea.size.y;
+
         newAnchorMin.x /= Screen.width;
         newAnchorMax.x /= Screen.width;
         newAnchorMin.y /= Screen.height;
