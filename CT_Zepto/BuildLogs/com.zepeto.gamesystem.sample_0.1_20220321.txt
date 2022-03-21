@@ -9,7 +9,7 @@ disable private room false
 
 [Build Manifest]
 [scenes]
-311 kb               assets/0. scenes/room_v_4.unity
+412 kb               assets/0. scenes/room_v_4.unity
 [assets]
 560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
 13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
@@ -34,6 +34,7 @@ disable private room false
 27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
 1 mb                 assets/4. animations/everydaymotionpackfree/motion/04_interaction/@male_talk_sit.fbx
 7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+33 kb                assets/2. models/room_v_4/room_v_4_frontwall.fbx
 2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
 2 kb                 assets/3. material/chair_leg.mat
 1 kb                 assets/_resources/[scriptsshader]/resources-internal/standardnocolor.shader
