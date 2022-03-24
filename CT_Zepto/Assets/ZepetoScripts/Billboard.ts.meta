@@ -18,15 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
-    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
-    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
-    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Billboard extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        // \uC6D4\uB4DC
-    \uC2A4\uD398\uC774\uC2A4 \uCE94\uBC84\uC2A4\uC5D0 \uC81C\uD398\uD1A0 \uCE74\uBA54\uB77C
-    \uB4F1\uB85D\uD558\uAE30\\r\\n        this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
-    = UnityEngine_1.GameObject.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoCamera)).camera;\\r\\n   
-    }\\r\\n    Update() {\\r\\n        // \uCE74\uBA54\uB77C\uC758 \uAC01\uB3C4 \uB530\uB77C\uAC00\uB3C4\uB85D\\r\\n       
-    this.transform.rotation = UnityEngine_1.GameObject.FindObjectOfType($typeof(ZEPETO_Character_Controller_1.ZepetoCamera)).transform.GetChild(0).rotation;\\r\\n   
-    }\\r\\n}\\r\\nexports.default = Billboard;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmlsbGJvYXJkLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQmlsbGJvYXJkLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVEO0FBQ3ZELDZFQUEyRDtBQUMzRCxpREFBcUQ7QUFHckQsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUV4RCxLQUFLO1FBRUQsNEJBQTRCO1FBQzVCLElBQUksQ0FBQyxZQUFZLFNBQUMsb0JBQU0sR0FBSSxXQUFXLEdBQUcsd0JBQVUsQ0FBQyxnQkFBZ0IsU0FBQywwQ0FBWSxHQUFJLE1BQU0sQ0FBQztJQUNqRyxDQUFDO0lBRUQsTUFBTTtRQUVGLGdCQUFnQjtRQUNoQixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLGdCQUFnQixTQUFDLDBDQUFZLEdBQUksU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUM7SUFDekcsQ0FBQztDQUNKO0FBYkQsNEJBYUMifQ==\",\"assetPath\":\"Assets/ZepetoScripts/Billboard.ts\",\"manifest\":{\"properties\":[],\"name\":\"Billboard\",\"description\":\"\"},\"isCompiled\":true}"
-  typescriptHash: 8513c35e1f8c7ae7850adc9e69cc6e39
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Billboard.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: c6488e8421e908ba9c2bca8432cda4ae

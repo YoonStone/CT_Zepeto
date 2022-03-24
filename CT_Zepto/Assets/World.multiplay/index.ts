@@ -1,14 +1,10 @@
-import {Sandbox, SandboxOptions, SandboxPlayer} from "ZEPETO.Multiplay";
-import {DataStorage} from "ZEPETO.Multiplay.DataStorage";
-import {Player, Transform, Vector3} from "ZEPETO.Multiplay.Schema";
+import { Sandbox, SandboxOptions, SandboxPlayer } from "ZEPETO.Multiplay";
+import { DataStorage } from "ZEPETO.Multiplay.DataStorage";
+import { Player, Transform, Vector3 } from "ZEPETO.Multiplay.Schema";
 
 export default class extends Sandbox {
 
     storageMap:Map<string,DataStorage> = new Map<string, DataStorage>();
-    
-    constructor() {
-        super();
-    }
 
     // 룸이 생성됐을 때
     onCreate(options: SandboxOptions) {
@@ -59,7 +55,7 @@ export default class extends Sandbox {
             player.transform = transform;
         });
     }
-   
+
     // 클라이언트가 룸에 입장할 때 (SandboxPlayer : 클라이언트와 관련된 정보)
     // async : await 키워드를 사용하기 위함
     async onJoin(client: SandboxPlayer) {
@@ -101,12 +97,7 @@ export default class extends Sandbox {
         this.state.players.set(client.sessionId, player);
     }
 
-    onTick(deltaTime: number): void {
-        //  서버에서 설정된 타임마다 반복적으로 호출되며 deltaTime 을 이용하여 일정한 interval 이벤트를 관리할 수 있음.
-    }
-
-     // 플레이어가 룸을 떠날 때 호출
-   async onLeave(client: SandboxPlayer, consented?: boolean) {
+    async onLeave(client: SandboxPlayer, consented?: boolean) {
 
         // 룸을 떠난 플레이어를 스테이트에서 제거
         // (delete 된 정보는 클라이언트에서 players.add_OnRemove 이벤트를 추가하여 확인 가능)

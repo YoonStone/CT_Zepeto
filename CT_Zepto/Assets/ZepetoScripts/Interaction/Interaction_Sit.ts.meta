@@ -18,49 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
-    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
-    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Character_Controller_1
-    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
-    require(\\\"ZEPETO.Script\\\");\\r\\nconst ClientStarter_1 = require(\\\"../ClientStarter\\\");\\r\\nclass
-    Interaction_Sit extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start()
-    {\\r\\n        this.clientStater = UnityEngine_1.GameObject.Find(\\\"ClientStarter\\\").GetComponent($typeof(ClientStarter_1.default));\\r\\n       
-    // \uBCC0\uC218 \uD560\uB2F9\\r\\n        this.openUI = this.transform.GetChild(0).gameObject;\\r\\n       
-    this.sittingPos = this.transform.GetChild(1);\\r\\n        this.button = this.openUI.GetComponentInChildren($typeof(UnityEngine_UI_1.Button));\\r\\n       
-    this.canvas = this.openUI.GetComponent($typeof(UnityEngine_1.Canvas));\\r\\n       
-    // \uC758\uC790 \uC778\uB371\uC2A4 \uBD80\uC5EC\\r\\n        this.number = parseInt(this.gameObject.name.split('_')[1]);\\r\\n       
-    // \uC549\uAE30 \uBC84\uD2BC \uB204\uB974\uBA74 \uC549\uAE30\\r\\n        this.button.onClick.AddListener(()
-    => {\\r\\n            // \uC549\uC740 \uC758\uC790\uB85C \uC0C1\uD0DC \uBCC0\uACBD\\r\\n           
-    this.isSit = true;\\r\\n            // \uBC84\uD2BC \uC548 \uBCF4\uC774\uAC8C\\r\\n           
-    this.openUI.SetActive(false);\\r\\n            // \uB0B4 \uCE90\uB9AD\uD130\\r\\n           
-    const character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\\r\\n           
-    // [\uC758\uC790 \uB3D9\uAE30\uD654] \uC549\uC740 \uC758\uC790 \uBC88\uD638 \uAC31\uC2E0\\r\\n           
-    this.clientStater.SendSitting(this.number);\\r\\n            // \uCE90\uB9AD\uD130
-    \uCEE8\uD2B8\uB864\uB7EC \uB044\uAE30\\r\\n            character.GetComponent($typeof(UnityEngine_1.CharacterController)).enabled
-    = false;\\r\\n            // \uC549\uC744 \uC704\uCE58\uB85C \uD154\uB808\uD3EC\uD2B8\\r\\n           
-    character.transform.position = this.sittingPos.position;\\r\\n            character.transform.rotation
-    = this.sittingPos.rotation;\\r\\n            // \uC549\uB294 \uC81C\uC2A4\uCC98\\r\\n           
-    character.SetGesture(this.animationClip);\\r\\n        });\\r\\n    }\\r\\n   
-    // \uB2FF\uC73C\uBA74 \uBC84\uD2BC \uBCF4\uC774\uAC8C\\r\\n    OnTriggerEnter(collier)
-    {\\r\\n        // \uBE48 \uC758\uC790 + \uB2FF\uC740 \uCE90\uB9AD\uD130\uAC00
-    \uB0B4 \uCE90\uB9AD\uD130\uC77C \uB54C\uB9CC\\r\\n        if (!this.isSit &&
-    collier.gameObject\\r\\n            == ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject)
-    {\\r\\n            // \uBAA8\uB4E0 \uC758\uC790 \uCC3E\uAE30\\r\\n           
-    const chairs = UnityEngine_1.GameObject.FindGameObjectsWithTag(\\\"CanSit\\\");\\r\\n           
-    // \uBAA8\uB4E0 \uBC84\uD2BC\uC744 \uBC18\uBCF5\uD574\uC11C \uB044\uAE30\\r\\n           
-    for (var i = 0; i < chairs.Length; i++) {\\r\\n                chairs[i].transform.GetChild(0).gameObject.SetActive(false);\\r\\n           
-    }\\r\\n            // \uBC29\uAE08 \uB2FF\uC740 \uC774 \uBC84\uD2BC\uB9CC \uBCF4\uC774\uAC8C\\r\\n           
-    this.openUI.SetActive(true);\\r\\n        }\\r\\n    }\\r\\n    // \uB5A8\uC5B4\uC9C0\uBA74
-    \uBC84\uD2BC \uC548 \uBCF4\uC774\uAC8C\\r\\n    OnTriggerExit(collier) {\\r\\n       
-    this.openUI.SetActive(false);\\r\\n    }\\r\\n    Update() {\\r\\n        //
-    \uC549\uC544\uC788\uB294 \uC0C1\uD0DC\uC5D0\uC11C \uC6C0\uC9C1\uC774\uBA74\\r\\n       
-    if (this.isSit && ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.tryMove)
-    {\\r\\n            // \uB0B4 \uCE90\uB9AD\uD130\\r\\n            const character
-    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\\r\\n           
-    // \uC81C\uC2A4\uCC98 \uC911\uB2E8\\r\\n            character.CancelGesture();\\r\\n           
-    // \uCE90\uB9AD\uD130 \uCEE8\uD2B8\uB864\uB7EC \uCF1C\uAE30\\r\\n           
-    character.GetComponent($typeof(UnityEngine_1.CharacterController)).enabled =
-    true;\\r\\n            // \uBE48 \uC758\uC790\uB85C \uC0C1\uD0DC \uBCC0\uACBD\\r\\n           
-    this.isSit = false;\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = Interaction_Sit;\\r\\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW50ZXJhY3Rpb25fU2l0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSW50ZXJhY3Rpb25fU2l0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWdJO0FBQ2hJLG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBQ3JELG9EQUE2QztBQUU3QyxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQWM5RCxLQUFLO1FBRUQsSUFBSSxDQUFDLFlBQVksR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxZQUFZLFNBQUMsdUJBQWEsRUFBRyxDQUFDO1FBRW5GLFFBQVE7UUFDUixJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQztRQUNwRCxJQUFJLENBQUMsVUFBVSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQzdDLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxzQkFBc0IsU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFDM0QsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLFlBQVksU0FBQyxvQkFBTSxFQUFHLENBQUM7UUFHakQsWUFBWTtRQUNaLElBQUksQ0FBQyxNQUFNLEdBQUcsUUFBUSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBRTNELGVBQWU7UUFDZixJQUFJLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBRWpDLGVBQWU7WUFDZixJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQztZQUVsQixXQUFXO1lBQ1gsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFFN0IsUUFBUTtZQUNSLE1BQU0sU0FBUyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1lBRTVFLHVCQUF1QjtZQUN2QixJQUFJLENBQUMsWUFBWSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7WUFFM0MsY0FBYztZQUNkLFNBQVMsQ0FBQyxZQUFZLFNBQUMsaUNBQW1CLEdBQUksT0FBTyxHQUFHLEtBQUssQ0FBQztZQUU5RCxjQUFjO1lBQ2QsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUM7WUFDeEQsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUM7WUFFeEQsU0FBUztZQUNULFNBQVMsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDO1FBQzdDLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELGFBQWE7SUFDYixjQUFjLENBQUMsT0FBaUI7UUFFNUIsMkJBQTJCO1FBQzNCLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxJQUFJLE9BQU8sQ0FBQyxVQUFVO2VBQzlCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsRUFDM0U7WUFDSSxXQUFXO1lBQ1gsTUFBTSxNQUFNLEdBQUcsd0JBQVUsQ0FBQyxzQkFBc0IsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUUzRCxpQkFBaUI7WUFDakIsS0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFHLE1BQU0sQ0FBQyxNQUFNLEVBQUUsQ0FBQyxFQUFFLEVBQUU7Z0JBQ3BDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7YUFDL0Q7WUFFRCxrQkFBa0I7WUFDbEIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDL0I7SUFDTCxDQUFDO0lBRUQsZ0JBQWdCO0lBQ2hCLGFBQWEsQ0FBQyxPQUFPO1FBQ2pCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFRCxNQUFNO1FBRUYsaUJBQWlCO1FBQ2pCLElBQUksSUFBSSxDQUFDLEtBQUssSUFBSSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxPQUFPLEVBQ25GO1lBQ0ksUUFBUTtZQUNSLE1BQU0sU0FBUyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1lBRTVFLFNBQVM7WUFDVCxTQUFTLENBQUMsYUFBYSxFQUFFLENBQUM7WUFFMUIsY0FBYztZQUNkLFNBQVMsQ0FBQyxZQUFZLFNBQUMsaUNBQW1CLEdBQUksT0FBTyxHQUFHLElBQUksQ0FBQztZQUU3RCxjQUFjO1lBQ2QsSUFBSSxDQUFDLEtBQUssR0FBRyxLQUFLLENBQUM7U0FDdEI7SUFDTCxDQUFDO0NBQ0o7QUFsR0Qsa0NBa0dDIn0=\",\"assetPath\":\"Assets/ZepetoScripts/Interaction/Interaction_Sit.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.AnimationModule\",\"name\":\"animationClip\",\"type\":\"UnityEngine.AnimationClip\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"openUI\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"sittingPos\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"button\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UIModule\",\"name\":\"canvas\",\"type\":\"UnityEngine.Canvas\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"number\",\"type\":\"System.Int32\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isSit\",\"type\":\"System.Boolean\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"clientStater\",\"type\":\"D:/GitHub/CT/CT_Zepto/Assets/ZepetoScripts/ClientStarter.default\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Interaction_Sit\",\"description\":\"\"},\"isCompiled\":true}"
-  typescriptHash: 3d5b1ea2e510b23a2cc92a1adfcab94d
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Interaction/Interaction_Sit.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: 0e962106a8750f987360fbe04c91ab8b
