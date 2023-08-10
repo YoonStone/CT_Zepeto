@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96d23dd00996d474ebe24a05a1a1a1a6
+guid: e2fb2ea499cb545fea08a6739dd8333a
 importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
 ScriptedImporter:
   internalIDToNameTable: []
@@ -18,5 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/ScreenShotModeManager.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: ea1ae757e944f714d39aa481cee38e1e
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/IKController.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: 59481e57c5f65b9d1331602e96a121f6

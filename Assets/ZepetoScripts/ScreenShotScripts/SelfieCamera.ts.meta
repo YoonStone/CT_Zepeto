@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48432be9f833e8246b204afb0be42355
+guid: fdad88fc98cff244f9806efff8493b4e
 importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
 ScriptedImporter:
   internalIDToNameTable: []
@@ -18,5 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/UIController.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: debfe011cd8423f909bb3e02ecf78400
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/SelfieCamera.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: 1c9aee56e5b1271e905f14b041c03482

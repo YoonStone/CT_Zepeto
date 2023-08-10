@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3cfe3ac06162dc438bb3b5f841f0482
+guid: fb07876dbe0ca47bd8b0ac901bcb2066
 importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
 ScriptedImporter:
   internalIDToNameTable: []
@@ -18,5 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Billboard.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: c6488e8421e908ba9c2bca8432cda4ae
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ClientStarter.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: db61d932c2f27142d6010f283736bfbe

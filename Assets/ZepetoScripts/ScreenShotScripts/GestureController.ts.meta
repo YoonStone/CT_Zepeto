@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 802eb0dbcfe44e94c946294e98171ad4
+guid: 68f0c6a528c2618438e5a6291abaea0c
 importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
 ScriptedImporter:
   internalIDToNameTable: []
@@ -18,5 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Interaction/Interaction_Sit.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 0e962106a8750f987360fbe04c91ab8b
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/GestureController.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: a728a58dc8eac0dddeee0fd183a10973

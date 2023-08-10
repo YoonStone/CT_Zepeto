@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb07876dbe0ca47bd8b0ac901bcb2066
+guid: 4ad7232826783c34082a0b7c2afabfba
 importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
 ScriptedImporter:
   internalIDToNameTable: []
@@ -18,5 +18,5 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ClientStarter.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: f65f852c8015c6ad94e6908663713726
+  compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/ScreenShotController.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
+  typescriptHash: 23d61f3a831ae1d964a642f5264c55a3
