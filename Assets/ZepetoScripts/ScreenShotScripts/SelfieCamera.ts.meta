@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/SelfieCamera.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 1c9aee56e5b1271e905f14b041c03482
+  typescriptHash: 46f5821712d7cd58b529070199f221a7

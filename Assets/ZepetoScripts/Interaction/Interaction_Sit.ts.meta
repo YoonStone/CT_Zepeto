@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Interaction/Interaction_Sit.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 3d5b1ea2e510b23a2cc92a1adfcab94d
+  typescriptHash: 0e962106a8750f987360fbe04c91ab8b

@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/ScreenShotController.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 23d61f3a831ae1d964a642f5264c55a3
+  typescriptHash: 91c09833841717b3fcc5bd9f08413a0c

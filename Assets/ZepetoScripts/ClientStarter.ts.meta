@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ClientStarter.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: db61d932c2f27142d6010f283736bfbe
+  typescriptHash: f65f852c8015c6ad94e6908663713726

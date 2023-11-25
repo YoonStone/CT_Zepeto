@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/Billboard.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 8513c35e1f8c7ae7850adc9e69cc6e39
+  typescriptHash: c6488e8421e908ba9c2bca8432cda4ae

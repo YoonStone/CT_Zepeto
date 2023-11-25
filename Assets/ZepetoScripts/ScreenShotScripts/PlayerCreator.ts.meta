@@ -19,4 +19,4 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/PlayerCreator.ts","manifest":{"properties":[],"name":"","description":""},"isCompiled":false}'
-  typescriptHash: 539b196026bf0c49e1281ef370437cb2
+  typescriptHash: 0464e823d55886fe1c0eef64a1195cc7
